@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Terminal, Zap, Shield, Cpu, Code2, ChevronRight, Menu, X, ArrowRight } from 'lucide-react';
@@ -14,9 +15,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            {/* Logo Alanı */}
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-amber-500 rounded-lg flex items-center justify-center text-white font-bold">
-              R
+            {/* Logo */}
+            <div className="relative w-8 h-8">
+              <Image 
+                src="/logo.svg" 
+                alt="Racoongate Logo" 
+                fill 
+                className="object-contain" // Logonun oranını bozmadan sığdırır
+              />
             </div>
             <span className="font-bold text-xl tracking-tighter">Racoongate</span>
           </div>
